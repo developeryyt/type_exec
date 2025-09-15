@@ -37,3 +37,4 @@ class Employee {
 const employee = new Employee('kim', 30, 'developer', 'male')
 
 // employee.gender = 'female'
+
