@@ -77,11 +77,28 @@ function printAuthorInfo(author: Author) {
 }
 
 
+type Fruit =
+    | {
+    name: "apple";
+    color: "red";
+}
+    | {
+    name: "banana";
+    color: "yellow";
+}
+    | {
+    name: "orange";
+    color: "orange";
+};
+
+type TransformedFruit = {
+    [R in Fruit as R['name']] : `${R['name']}:${R['color']}`
+}[Fruit['name']]
 
 
-
-
-
+// const checkType: TransformedFruit = {
+//     apple: 'red'
+// }
 
 
 
